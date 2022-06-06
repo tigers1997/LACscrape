@@ -3,7 +3,7 @@ import scrapy
 from scrapy_selenium import SeleniumRequest
 import pkgutil
 
-data = pkgutil.get_data("project","spiders/wp-sitemap-posts-product-1.txt")
+data = pkgutil.get_data("project","compet1/spiders/wp-sitemap-posts-product-1.txt")
 
 class InlineSpider(scrapy.Spider):
     name = "Inline_spider"
