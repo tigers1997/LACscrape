@@ -1,12 +1,15 @@
+
 import scrapy
 from scrapy_selenium import SeleniumRequest
+import pkgutil
 
 
 
 class InlineSpider(scrapy.Spider):
     name = "Inline_spider"
-
-    with open("wp-sitemap-posts-product-1.txt", "rt") as f:
+    
+    data = pkgutil.get_data("LACscrape", "spiders/wp-sitemap-posts-product-1.txt")
+    with data as f:
         start_urls = [url.strip() for url in f.readlines()]
 
     #def start_requests(self):
