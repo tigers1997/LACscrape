@@ -3,13 +3,13 @@ import scrapy
 from scrapy_selenium import SeleniumRequest
 import pkgutil
 
-
+data = pkgutil.get_data("project","spiders/wp-sitemap-posts-product-1.txt")
 
 class InlineSpider(scrapy.Spider):
     name = "Inline_spider"
     
    
-    with pkgutil.get_data("project","spiders/wp-sitemap-posts-product-1.txt") as f:
+    with data as f:
         start_urls = [url.strip() for url in f.readlines()]
 
     #def start_requests(self):
