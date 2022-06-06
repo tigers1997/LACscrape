@@ -8,6 +8,6 @@ setup(
     packages     = find_packages(),
     entry_points = {'scrapy': ['settings = compet1.settings']},
     package_data={
-        'project': ['spiders/*.txt']
+        'project': ['compet1/spiders/*.txt']
     },
 )
