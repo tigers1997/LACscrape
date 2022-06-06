@@ -4,3 +4,4 @@
 #
 #    pip-compile
 #
+scrapy-selenium==0.0.7
