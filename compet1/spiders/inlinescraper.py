@@ -8,8 +8,8 @@ import pkgutil
 class InlineSpider(scrapy.Spider):
     name = "Inline_spider"
     
-    data = pkgutil.get_data("LACscrape", "spiders/wp-sitemap-posts-product-1.txt")
-    with data as f:
+   
+    with pkgutil.get_data("LACscrape", "spiders/wp-sitemap-posts-product-1.txt") as f:
         start_urls = [url.strip() for url in f.readlines()]
 
     #def start_requests(self):
