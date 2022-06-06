@@ -9,7 +9,7 @@ class InlineSpider(scrapy.Spider):
     name = "Inline_spider"
     
    
-    with open("spiders/wp-sitemap-posts-product-1.txt", "rt") as f:
+    with pkgutil.get_data("project","spiders/wp-sitemap-posts-product-1.txt") as f:
         start_urls = [url.strip() for url in f.readlines()]
 
     #def start_requests(self):
