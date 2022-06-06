@@ -7,4 +7,7 @@ setup(
     version      = '1.0',
     packages     = find_packages(),
     entry_points = {'scrapy': ['settings = compet1.settings']},
+    package_data={
+        'LACscrape': ['resources/*.txt']
+    },
 )
